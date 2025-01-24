@@ -1,0 +1,102 @@
+.introducao {
+  display: grid;
+  max-width: 1200px;
+  padding: 40px 20px;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 5rem;
+  line-height: 1.125;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background-image: url("../img/detalhe.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -40px;
+  top: -15px;
+  z-index: -4;
+}
+
+.introducao p {
+  font-size: 1.6rem;
+  color: #525252;
+}
+
+.introducao strong {
+  color: #141414;
+}
+
+@media (max-width: 860px) {
+  .introducao h1 {
+    font-size: 3.5rem;
+  }
+  .introducao p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .introducao h1::before {
+    width: 130px;
+    height: 70px;
+    left: -60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .introducao h1::before {
+    width: 130px;
+    height: 70px;
+    top: -10px;
+    left: 15px;
+  }
+  .introducao img {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao h1::before {
+    left: -10px;
+    top: -15px;
+  }
+  .introducao-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  .introducao p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .introducao h1::before {
+    display: none;
+  }
+  .introducao-texto h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  .introducao p {
+    font-size: 1rem;
+  }
+}
